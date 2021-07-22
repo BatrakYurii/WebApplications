@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplications.Services;
 
 namespace WebApplications
 {
@@ -26,7 +27,7 @@ namespace WebApplications
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddTransient<IEmployeeService, EmployeeService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
