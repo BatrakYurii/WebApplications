@@ -29,5 +29,23 @@ namespace WebApplications.Services
         {
             employees.Add(employee);
         }
+
+        public Employee GetById(int id)
+        {
+            foreach (Employee employee in employees)
+            {
+                if (employee.Id == id)
+                    return employee;
+            }
+            return null;
+        }
+
+        public void Put(int deleteId, Employee employee)
+        {
+            employees.RemoveAll(e => e.Id == deleteId);
+            employee.Id = deleteId;
+            employees.Add(employee);
+            
+        }
     }
 }

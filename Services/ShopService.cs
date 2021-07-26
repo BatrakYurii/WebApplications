@@ -28,6 +28,23 @@ namespace WebApplications.Services
         {
             shops.Add(shop);
         }
+
+        public Shop GetById(int id)
+        {
+            foreach(Shop shop in shops)
+            {
+                if (shop.id == id)
+                    return shop;
+            }
+            return null;
+        }
+        public void Put(int deleteId, Shop shop)
+        {
+            shops.RemoveAll(e => e.id == deleteId);
+            shop.id = deleteId;
+            shops.Add(shop);
+
+        }
     }
     
 }

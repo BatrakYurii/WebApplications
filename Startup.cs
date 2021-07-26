@@ -27,7 +27,8 @@ namespace WebApplications
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IEmployeeService, EmployeeService>();
+            services.AddSingleton<IEmployeeService, EmployeeService>();
+            services.AddSingleton<IShopService, ShopService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

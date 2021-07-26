@@ -9,6 +9,8 @@ namespace WebApplications.Services
     public interface IEmployeeService
     {
         public IEnumerable<Employee> GetAll();
+        public Employee GetById(int id);
+        public void Put(int deleteId, Employee employee);
         public void Delete(int id);
         public void Post(Employee employee);
     }
