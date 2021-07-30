@@ -20,10 +20,12 @@ namespace WebApplications.Services
             return shops;
             
         }
+
         public void Delete(int id)
         {
             shops.RemoveAll(e => e.id == id);
         }
+
         public void Post(Shop shop)
         {
             shops.Add(shop);
@@ -38,6 +40,7 @@ namespace WebApplications.Services
             }
             return null;
         }
+
         public void Put(int deleteId, Shop shop)
         {
             shops.RemoveAll(e => e.id == deleteId);

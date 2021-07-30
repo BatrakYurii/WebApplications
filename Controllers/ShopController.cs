@@ -24,23 +24,27 @@ namespace WebApplications.Controllers
         {
             return _shopService.GetAll();
         }
+
         [HttpGet]
         [Route("{id}")]
         public Shop GetById(int id)
         {
             return _shopService.GetById(id);
         }
+
         [HttpDelete]
         [Route("{id}")]
         public void Delete(int id)
         {
             _shopService.Delete(id);
         }
+
         [HttpPost]
         public void Post(Shop shop)
         {
             _shopService.Post(shop);
         }
+
         [HttpPut]
         public void Put(int id, Shop shop)
         {

@@ -21,10 +21,12 @@ namespace WebApplications.Services
             return employees;
             
         }
+
         public void Delete(int id)
         {
             employees.RemoveAll(e => e.Id == id);
         }
+
         public void Post(Employee employee)
         {
             employees.Add(employee);

@@ -24,23 +24,27 @@ namespace WebApplications.Controllers
         {
             return _employeeService.GetAll();
         }
+
         [HttpGet]
         [Route("{id}")]
         public Employee GetById(int id)
         {
             return _employeeService.GetById(id);
         }
+
         [HttpDelete]
         [Route("{id}")]
         public void Delete(int id)
         {
             _employeeService.Delete(id);
         }
+
         [HttpPost]
         public void Post(Employee employee)
         {
             _employeeService.Post(employee);
         }
+
         [HttpPut]
         public void Put(int id, Employee employee)
         {
